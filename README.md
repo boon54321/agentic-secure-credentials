@@ -6,7 +6,7 @@ A Python package to store and retrieve encrypted usernames, passwords, and resou
 ## Installation
 Install directly from GitHub:
 ```bash
-pip install git+https://github.com/yourusername/agentic-secure-credentials.git
+pip install git+https://github.com/boon12345/agentic-secure-credentials.git
 ```
 
 ## Usage
