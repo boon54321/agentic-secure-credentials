@@ -5,7 +5,7 @@ A simple Python package to store and retrieve usernames, passwords, and resource
 
 ## Installation
 ```bash
-pip install secure-credentials
+pip install agentic-secure-credentials
 ```
 
 ## Usage
