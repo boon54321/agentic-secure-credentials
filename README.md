@@ -1,5 +1,5 @@
 # README.md
-# Secure Credentials
+# Agentic Secure Credentials
 
 A simple Python package to store and retrieve usernames, passwords, and resource details in JSON format.
 
