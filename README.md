@@ -4,10 +4,10 @@
 A simple Python package to store and retrieve usernames, passwords, and resource details in JSON format.
 
 ## Installation
+Install directly from GitHub:
 ```bash
-pip install agentic-secure-credentials
+pip install git+https://github.com/boon54321/agentic-secure-credentials.git
 ```
-
 ## Usage
 ```python
 from secure_credentials import CredentialManager
