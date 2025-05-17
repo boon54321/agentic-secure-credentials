@@ -8,7 +8,6 @@ class CredentialManager:
         self.encrypted_file = encrypted_file
         self.key_file = key_file
         self.encryption_password_file = encryption_password_file
-        self.fernet = self._load_or_generate_key()
 
     def _load_or_generate_key(self):
         if os.path.exists(self.key_file):
@@ -29,10 +28,13 @@ class CredentialManager:
         self.encrypted_file = f"{encryption_password}_{self.encrypted_file}"
         self.key_file = f"{encryption_password}_{self.key_file}"
         self.encryption_password_file = f"{encryption_password}_{self.encryption_password_file}"
-        
+           
+        self.fernet = self._load_or_generate_key()
+
         encrypted_password = self.fernet.encrypt(encryption_password.encode())
         with open(self.encryption_password_file, 'wb') as f:
             f.write(encrypted_password)
+
 
     def read_encryption_topic(self, encryption_password):
         """Encrypt and save the encryption password."""
