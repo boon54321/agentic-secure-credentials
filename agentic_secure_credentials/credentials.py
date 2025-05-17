@@ -42,6 +42,7 @@ class CredentialManager:
         self.encrypted_file = f"{encryption_password}_{self.encrypted_file}"
         self.key_file = f"{encryption_password}_{self.key_file}"
         self.encryption_password_file = f"{encryption_password}_{self.encryption_password_file}"
+        self.fernet = self._load_or_generate_key()
         
         
     def _load_encryption_password(self):
