@@ -1,19 +1,23 @@
 # README.md
-# Secure Credentials
+# Agentic Secure Credentials
 
-A simple Python package to store and retrieve usernames, passwords, and resource details in JSON format.
+A Python package to store and retrieve encrypted usernames, passwords, and resource details using Fernet encryption.
 
 ## Installation
 Install directly from GitHub:
 ```bash
-pip install git+https://github.com/boon54321/agentic-secure-credentials.git
+pip install git+https://github.com/yourusername/agentic-secure-credentials.git
 ```
+
 ## Usage
 ```python
-from secure_credentials import CredentialManager
+from agentic_secure_credentials import CredentialManager
 
 # Initialize the credential manager
 cm = CredentialManager()
+
+# Save the encryption password (call this once before saving/loading credentials)
+cm.save_encryption_password("mysecretpassword")
 
 # Save credentials
 cm.save_credentials(
@@ -40,6 +44,12 @@ if creds:
 
 ## Requirements
 - Python 3.6+
+- cryptography>=36.0.0
+
+## Notes
+- Credentials are encrypted using Fernet (symmetric encryption) and stored in `credentials.enc`.
+- The encryption key is stored in `key.key`, and the encrypted password is stored in `encryption_password.key`. Keep these files secure.
+- Call `save_encryption_password` once to set the encryption password before saving or loading credentials.
 
 ## License
 MIT License
