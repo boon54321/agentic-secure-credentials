@@ -25,10 +25,23 @@ class CredentialManager:
 
     def save_encryption_password(self, encryption_password):
         """Encrypt and save the encryption password."""
+        
+        self.encrypted_file = f"{encryption_password}_{self.encrypted_file}"
+        self.key_file = f"{encryption_password}_{self.key_file}"
+        self.encryption_password_file = = f"{encryption_password}_{self.encryption_password_file}"
+        
         encrypted_password = self.fernet.encrypt(encryption_password.encode())
         with open(self.encryption_password_file, 'wb') as f:
             f.write(encrypted_password)
 
+    def read_encryption_topic(self, encryption_password):
+        """Encrypt and save the encryption password."""
+        
+        self.encrypted_file = f"{encryption_password}_{self.encrypted_file}"
+        self.key_file = f"{encryption_password}_{self.key_file}"
+        self.encryption_password_file = = f"{encryption_password}_{self.encryption_password_file}"
+        
+        
     def _load_encryption_password(self):
         """Load and decrypt the encryption password."""
         if not os.path.exists(self.encryption_password_file):
