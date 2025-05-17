@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="agentic-secure-credentials",
-    version="0.1.5",
+    version="0.1.6",
     packages=find_packages(),
     install_requires=['cryptography>=36.0.0'],
     author="Your Name",
