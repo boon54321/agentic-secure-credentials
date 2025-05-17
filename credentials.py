@@ -25,25 +25,3 @@ class CredentialManager:
         with open(self.data_file, 'r') as f:
             return json.load(f)
 
-# setup.py
-from setuptools import setup, find_packages
-
-setup(
-    name="secure-credentials",
-    version="0.1.1",
-    packages=find_packages(),
-    install_requires=[],
-    author="Your Name",
-    author_email="your.email@example.com",
-    description="A simple package to store and retrieve credentials with resource details",
-    long_description=open('README.md').read(),
-    long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/secure-credentials",
-    classifiers=[
-        "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: MIT License",
-        "Operating System :: OS Independent",
-    ],
-    python_requires='>=3.6',
-)
-
